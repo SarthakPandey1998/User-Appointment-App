@@ -3,6 +3,7 @@ import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
 import { AppointmentContract } from "../contracts/AppointmentContract";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export function TodoUserDashboard() {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ export function TodoUserDashboard() {
   const [cookies, setCookie, removeCookie] = useCookies(["userid"]);
 
   function handleSignout() {
+    toast.success("User Logout Successful")
     removeCookie("userid");
     navigate("/login");
   }
