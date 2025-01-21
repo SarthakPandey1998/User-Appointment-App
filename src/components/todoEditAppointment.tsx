@@ -19,7 +19,7 @@ export function TodoEditAppointment() {
   const navigate = useNavigate();
   const params = useParams();
 
-  const [cookies, setcookie, removeCookie] = useCookies(["userid"]);
+  const [cookies] = useCookies(["userid"]);
 
   const formattedDate = new Date().toISOString().split("T")[0];
   const formik = useFormik({

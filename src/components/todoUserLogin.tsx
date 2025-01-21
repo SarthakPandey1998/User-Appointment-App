@@ -9,7 +9,7 @@ export function TodoUserLogin() {
   const navigate = useNavigate();
 
   // eslint-disable-next-line
-  const [cookies, setCookie, removeCookie] = useCookies(["userid"]);
+  const [_, setCookie] = useCookies(["userid"]);
 
   const formik = useFormik({
     initialValues: {

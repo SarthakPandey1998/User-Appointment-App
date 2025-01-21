@@ -11,7 +11,7 @@ export function TodoUserDashboard() {
   const [appointments, setAppointments] = useState<AppointmentContract[]>();
 
   // eslint-disable-next-line
-  const [cookies, setCookie, removeCookie] = useCookies(["userid"]);
+  const [cookies, _, removeCookie] = useCookies(["userid"]);
 
   function handleSignout() {
     toast.success("User Logout Successful")
