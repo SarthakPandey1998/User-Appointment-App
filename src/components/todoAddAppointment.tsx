@@ -7,7 +7,7 @@ import * as Yup from "yup";
 
 export function TodoAddAppointment() {
   const navigate = useNavigate();
-  const [cookies, setCookie, removeCookie] = useCookies(["userid"]);
+  const [cookies] = useCookies(["userid"]);
 
   const formattedDate = new Date().toISOString().split("T")[0];
   const formik = useFormik({
